@@ -1,0 +1,96 @@
+<!DOCTYPE html> <!-- Esta es la unica etiqueta que no se cierra -->
+<html lang="es">
+
+<head>
+    <title>Mi primera web</title>
+</head>
+
+<body>
+    <h1>Hola Mundo!</h1>
+    <h2>Bienvenido a la web</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non velit expedita ducimus ipsa perferendis architecto
+        <br>
+        illo inventore sequi nostrum. Consequatur corrupti illum corporis eligendi hic est possimus esse recusandae
+        veritatis?
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non velit expedita ducimus ipsa perferendis architecto
+        <hr>
+        illo inventore sequi nostrum. Consequatur corrupti illum corporis eligendi hic est possimus esse recusandae
+        veritatis?
+    </p>
+
+    <h3>Encabezado de tercer nivel</h3>
+    <p><strong>Lorem ipsum</strong> <i>dolor</i>,
+    <blockquote>
+        sit amet consectetur adipisicing elit.
+    </blockquote>
+    Laboriosam cumque aut nesciunt nihil labore dolor culpa voluptatum. Itaque, blanditiis eveniet? Ipsam ad hic
+    suscipit iste nemo nostrum molestiae dignissimos. Ipsam?</p>
+
+
+    <hr>
+    <h3>Imágenes en HTML</h3>
+    <img src="./img/perrito.jpg" alt="Imagen de un perrito" title="Foto de un perrito" width="250">
+    <hr>
+
+
+    <h3>Listado de Frutas</h3>
+    <ol>
+        <li>Manzanas</li>
+        <ul>
+            <li>roja</li>
+            <li>verde</li>
+        </ul>
+        <li>Naranjas</li>
+        <li>Peras</li>
+    </ol>
+    <h3>Listado de Frutas Desordenado</h3>
+    <ul>
+        <li>Manzanas</li>
+        <li>Naranjas</li>
+        <li>Peras</li>
+    </ul>
+
+    <h3>Tablas</h3>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Pais</th>
+        </tr>
+        <tr>
+            <td>Josue</td>
+            <td>Canaviri</td>
+            <td>Bolivia</td>
+        </tr>
+        
+    </table>
+
+    <h3>Formularios</h3>
+    <form method="post">
+        <p>
+            <label for="first_name">Nombre</label>
+            <input type="text" name="first_name" id="first_name" placeholder="Escribe tu nombre">
+        </p>
+
+        <p>
+            <label for="comment">Comments:</label>
+            <textarea name="comment" id="" cols="30" rows="10"></textarea>
+        </p>
+
+        <h3>Genero</h3>
+        <input type="radio" name="genero" value="hombre"> Hombre <br>
+        <input type="radio" name="genero" value="mujer"> Mujer <br>
+        <input type="radio" name="genero" value="ninguno"> Prefiero no decirlo <br>
+
+        <h3>Genero con Options</h3>
+        <select name="" id="">
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="ninguno">Prefiero no decirlo</option>
+        </select>
+        <input type="submit" value="Enviar Formulario">
+    </form>
+</body>
+
+</html>
