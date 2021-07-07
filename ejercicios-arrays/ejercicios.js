@@ -19,5 +19,22 @@ showArray('Elementos del array', arr);
 
 // Ordenamos el array
 arr.sort();
-console.log(arr);
 showArray('Ordenando los elementos', arr);
+
+// Mostramos los elementos en orden reverso
+arr.reverse();
+showArray('Inverso de los elementos', arr);
+
+document.write(`<h3>El array tiene ${arr.length}</h3>`);
+
+// Bucamos un elemento en el array
+let element = parseInt(prompt('Que numero desea buscar: ', 0));
+let search = arr.findIndex(item => item == element);
+
+if (search && search !== -1) {
+  document.write(
+    `<h3>El elemento esta en la posicion ${search}</h3>`
+  );
+} else {
+  document.write(`El elemento no existe`)
+}
