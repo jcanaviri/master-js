@@ -28,3 +28,14 @@ for (let value in allDivs) {
 let mySection = document.querySelector('#mi-section');
 let hr = document.createElement('hr');
 mySection.append(hr);
+
+// getElementsByTagName retorna un arreglo
+let red = document.getElementsByClassName('red');
+red[0].style.background = 'red';
+
+let green = document.getElementsByClassName('green');
+green[0].style.background = 'green';
+
+let blue = document.getElementsByClassName('blue');
+blue[0].style.background = 'blue';
+
