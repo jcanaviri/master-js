@@ -1,13 +1,25 @@
 'use strict';
 
-let btn = document.querySelector('#btn');
+let btn = document.querySelector('#btn-color');
+let counter = 1;
 
-function changeColor() {
-  let bg = btn.style.background;
-  if (bg == 'green') {
+btn.addEventListener('click', (event) => {
+  if (counter % 2 == 0) {
     btn.style.background = 'red';
   } else {
     btn.style.background = 'green';
   }
-  return true;
-}
+  counter++;
+});
+
+
+let btnCounter = document.querySelector('#btn-counter');
+let counterNumber = 1;
+
+btnCounter.style.borderRadius = '50%';
+btnCounter.style.padding = '30px';
+
+btnCounter.addEventListener('click', (event) => {
+  btnCounter.textContent = counterNumber;
+  counterNumber++;
+})
