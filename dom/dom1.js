@@ -2,7 +2,7 @@
 
 const changeColor = (newColor) => {
   box.style.background = newColor;
-}
+};
 
 let box = document.getElementById('mi-caja');
 box.innerHTML = `Texto agregado con JS`;
@@ -10,4 +10,21 @@ box.style.background = '#2c2c2c';
 box.style.padding = '20px';
 box.style.color = 'white';
 box.className = 'new-class';
-console.log(box);
+
+// Seleccionar por etiqueta
+let allDivs = document.getElementsByTagName('div');
+let content = allDivs[2];
+content.innerHTML = 'Cambiado en javascript';
+
+for (let value in allDivs) {
+  if (typeof allDivs[value].textContent == 'string') {
+    let paragraph = document.createElement('p');
+    let text = document.createTextNode(allDivs[value].textContent);
+    paragraph.appendChild(text);
+    document.querySelector('#mi-section').appendChild(paragraph);
+  }
+}
+
+let mySection = document.querySelector('#mi-section');
+let hr = document.createElement('hr');
+mySection.append(hr);
