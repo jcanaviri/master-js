@@ -12,7 +12,6 @@ btn.addEventListener('click', (event) => {
   counter++;
 });
 
-
 let btnCounter = document.querySelector('#btn-counter');
 let counterNumber = 1;
 
@@ -22,4 +21,30 @@ btnCounter.style.padding = '30px';
 btnCounter.addEventListener('click', (event) => {
   btnCounter.textContent = counterNumber;
   counterNumber++;
-})
+});
+
+// Focus
+let inputField = document.getElementById('field_name');
+inputField.addEventListener('focus', () => {
+  console.log('[focus] Esta en focus');
+});
+
+// Blur
+inputField.addEventListener('blur', () => {
+  console.log('[blur] FUERA del input');
+});
+
+// Keydown
+inputField.addEventListener('keydown', (event) => {
+  console.log('pulsada tecla', String.fromCharCode(event.keyCode));
+});
+
+// Keypress
+inputField.addEventListener('keypress', (event) => {
+  console.log('pulsando tecla', String.fromCharCode(event.keyCode));
+});
+
+// Keyup
+inputField.addEventListener('keyup', (event) => {
+  console.log('levantaste el dedo', String.fromCharCode(event.keyCode));
+});
