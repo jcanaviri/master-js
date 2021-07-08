@@ -4,11 +4,12 @@ window.addEventListener('load', () => {
   let btn = document.querySelector('#btn-color');
   let counter = 1;
 
-  btn.addEventListener('click', (event) => {
+  btn.addEventListener('click', function() {
+    console.log(this);
     if (counter % 2 == 0) {
-      btn.style.background = 'red';
+      this.style.background = 'red';
     } else {
-      btn.style.background = 'green';
+      this.style.background = 'green';
     }
     counter++;
   });
