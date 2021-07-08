@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio DOM eventos y funciones</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -15,21 +16,29 @@
     <!-- 2.- Boton enviar formulario -->
     <!-- 3.- Mostrar datos en la pantalla -->
     <!-- 4.- Boton que nos muestre los datos actuales -->
-    <form method="post">
-        <p>
-            <label for="name">Nombre: </label>
-            <input type="text" id="name" name="name">
-        </p>
-        <p>
-            <label for="surname">Apellidos: </label>
-            <input type="text" id="surname" name="surname">
-        </p>
-        <p>
-            <label for="age">Edad: </label>
-            <input type="text" id="age" name="age">
-        </p>
-        <input type="submit" value="Enviar Datos">
-    </form>
+    <div class="box">
+        <form method="post" id="form">
+            <p>
+                <label for="name">Nombre: </label>
+                <input type="text" id="name" name="name">
+            </p>
+            <p>
+                <label for="surname">Apellidos: </label>
+                <input type="text" id="surname" name="surname">
+            </p>
+            <p>
+                <label for="age">Edad: </label>
+                <input type="text" id="age" name="age">
+            </p>
+            <input type="submit" value="Enviar Datos">
+        </form>
+    </div>
+    <div class="box dashed">
+        <h3>Informacion del usuario</h3>
+        <hr>
+    </div>
+
+    <script src="ejercicio.js"></script>
 </body>
 
 </html>
