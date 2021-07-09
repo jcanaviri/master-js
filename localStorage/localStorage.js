@@ -27,3 +27,5 @@ localStorage.setItem('user', JSON.stringify(user));
 let myUser = JSON.parse(localStorage.getItem('user'));
 
 document.querySelector('#user').innerHTML = `${myUser.name} - ${myUser.email}`;
+
+localStorage.removeItem('user');
