@@ -15,3 +15,15 @@ let value = localStorage.getItem('eggs');
 console.log(value);
 
 document.querySelector('#paragraph').innerHTML = value;
+
+// Guardando objetos en localStorage
+let user = {
+  name: 'Josue',
+  email: 'email@example.com',
+};
+
+localStorage.setItem('user', JSON.stringify(user));
+
+let myUser = JSON.parse(localStorage.getItem('user'));
+
+document.querySelector('#user').innerHTML = `${myUser.name} - ${myUser.email}`;
