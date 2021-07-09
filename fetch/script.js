@@ -57,3 +57,31 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 })
   .then((response) => response.json())
   .then((json) => console.log(json));
+
+// Patching a resource
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'PATCH',
+  body: JSON.stringify({
+    title: 'foo',
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+// Delete a resource
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'DELETE',
+});
+
+// This will return all the posts that belong to the first user
+fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+// This is equivalent to /comments?postId=1
+fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
