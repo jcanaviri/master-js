@@ -9,17 +9,25 @@ const movie = {
 const movies = [
   {
     title: 'Memento',
-    year: 1997,
+    year: 2000,
     director: 'Christopher Nolan',
   },
   {
     title: 'Interestelar',
-    year: 2015,
+    year: 2014,
+    director: 'Christopher Nolan',
+  },
+  {
+    title: 'Inseption',
+    year: 2010,
+    director: 'Christopher Nolan',
+  },
+  {
+    title: 'Tenet',
+    year: 2020,
     director: 'Christopher Nolan',
   },
 ];
-
-console.log(movies);
 
 const movieBox = document.querySelector('#movies');
 movies.forEach((movie) => {
