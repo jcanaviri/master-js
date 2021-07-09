@@ -6,3 +6,6 @@ if (typeof Storage != 'undefined') {
 } else {
   console.log('no');
 }
+
+// Almacenando datos en localStorage
+localStorage.setItem('eggs', '42');
