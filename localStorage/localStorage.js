@@ -9,3 +9,9 @@ if (typeof Storage != 'undefined') {
 
 // Almacenando datos en localStorage
 localStorage.setItem('eggs', '42');
+
+// Extraer un dato de localStorage
+let value = localStorage.getItem('eggs');
+console.log(value);
+
+document.querySelector('#paragraph').innerHTML = value;
