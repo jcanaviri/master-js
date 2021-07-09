@@ -1,3 +1,3 @@
 # Master de JavaScript
 
-apuntes de clase
+Apuntes de un curso de JavaScript
