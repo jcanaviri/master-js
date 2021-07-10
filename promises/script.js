@@ -7,10 +7,16 @@ getUsers()
   .then((data) => data.json())
   .then((users) => {
     listUsers(users.data);
+    return getInfo();
+  })
+  .then((data) => {
+    console.log(data);
     return getJannet();
   })
   .then((data) => data.json())
-  .then((jannet) => showUser(jannet.data));
+  .then((user) => {
+    showUser(user.data);
+  });
 
 function getUsers() {
   return fetch('https://reqres.in/api/users');
@@ -18,6 +24,26 @@ function getUsers() {
 
 function getJannet() {
   return fetch('https://reqres.in/api/users/2');
+}
+
+function getInfo() {
+  let teacher = {
+    firstName: 'Victor',
+    lastName: 'Robles',
+    url: 'https://victorroblesweb.es',
+  };
+
+  return new Promise((resolve, reject) => {
+    let teacherString = '';
+    setTimeout(() => {
+      teacherString = JSON.stringify(teacher);
+      if (typeof teacherString !== 'string' || teacherString == '') {
+        return reject('Error');
+      }
+      
+      return resolve(teacherString);
+    }, 3000);
+  });
 }
 
 function listUsers(users) {
