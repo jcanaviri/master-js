@@ -16,6 +16,9 @@ getUsers()
   .then((data) => data.json())
   .then((user) => {
     showUser(user.data);
+  })
+  .catch((err) => {
+    console.log(err);
   });
 
 function getUsers() {
@@ -40,7 +43,7 @@ function getInfo() {
       if (typeof teacherString !== 'string' || teacherString == '') {
         return reject('Error');
       }
-      
+
       return resolve(teacherString);
     }, 3000);
   });
