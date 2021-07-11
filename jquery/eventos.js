@@ -19,4 +19,14 @@ $(document).ready(function () {
   box.dblclick(function () {
     $(this).css('background-color', 'pink').css('color', 'yellow');
   });
+
+  // Focus y blur
+  let name = $('#name');
+  name.focus(function () {
+    $(this).css('border', '1px solid green');
+  });
+  name.blur(function () {
+    $(this).css('border', '1px solid #ccc');
+    $('#data').text($(this).val()).show();
+  });
 });
