@@ -1,13 +1,14 @@
 'use strict';
 
 $(document).ready(function () {
-  // Mouse Over
-  let box = $('#box');
-  box.mouseover(function () {
+  function setRed() {
     $(this).css('background-color', 'red');
-  });
-  // Mouse out
-  box.mouseout(function () {
-    $(this).css('background', 'green');
-  });
+  }
+  function setGreen() {
+    $(this).css('background-color', 'green');
+  }
+
+  // Hover
+  let box = $('#box');
+  box.hover(setRed, setGreen);
 });
