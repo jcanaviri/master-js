@@ -27,4 +27,8 @@ $(document).ready(() => {
       self.removeClass('big');
     }
   });
+
+  // Selectores de atributo
+  $('[title="Google"]').css('background', '#555');
+  $('[title="Facebook"]').css('background', '#eeeeca');
 });
