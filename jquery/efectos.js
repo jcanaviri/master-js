@@ -15,4 +15,8 @@ $(document).ready(function () {
 
     $('#box').fadeTo('slow', 0.2);
   });
+
+  $('#allInOne').click(function () {
+    $('#box').slideToggle('fast');
+  });
 });
