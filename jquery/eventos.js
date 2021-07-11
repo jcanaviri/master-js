@@ -22,11 +22,30 @@ $(document).ready(function () {
 
   // Focus y blur
   let name = $('#name');
+  let data = $('#data');
+
   name.focus(function () {
     $(this).css('border', '1px solid green');
   });
   name.blur(function () {
     $(this).css('border', '1px solid #ccc');
-    $('#data').text($(this).val()).show();
+    data.text($(this).val()).show();
+  });
+
+  // Mousedown y mouseup
+  data.mousedown(function () {
+    $(this).css('border-color', '#ccc');
+  });
+  data.mouseup(function () {
+    $(this).css('border-color', 'black');
+  });
+
+  // Mousemove
+  $(document).mousemove(function (event) {
+    $('body').css('cursor', 'none')
+    $('#follow-me').css({
+      left: event.clientX,
+      top: event.clientY,
+    });
   });
 });
