@@ -31,4 +31,8 @@ $(document).ready(() => {
   // Selectores de atributo
   $('[title="Google"]').css('background', '#555');
   $('[title="Facebook"]').css('background', '#eeeeca');
+
+  // Otros
+  $('#caja').find('#first_item').css('color', 'cyan');
+  $('#second_item').parent().css('border', '2px dashed red');  // llega hasta el ul
 });
