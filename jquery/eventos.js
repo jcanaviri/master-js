@@ -11,4 +11,12 @@ $(document).ready(function () {
   // Hover
   let box = $('#box');
   box.hover(setRed, setGreen);
+
+  // Click, Double Click
+  box.click(function () {
+    $(this).css('background-color', 'blue').css('color', 'white');
+  });
+  box.dblclick(function () {
+    $(this).css('background-color', 'pink').css('color', 'yellow');
+  });
 });
