@@ -11,10 +11,20 @@ $(document).ready(() => {
 
   // Selector de clase
   let myClass = $('.my-class');
-  myClass.css('border', '5px dashed black');
+  myClass.addClass('zebra');
 
-  $('.without-border').click(function() {
+  $('.without-border').click(function () {
     $(this).addClass('zebra');
-    console.log('CLICK');
+  });
+
+  // Selector de etiqueta
+  let paragraphs = $('p').css('cursor', 'pointer');
+  paragraphs.click(function () {
+    let self = $(this);
+    if (!self.hasClass('big')) {
+      self.addClass('big');
+    } else {
+      self.removeClass('big');
+    }
   });
 });
