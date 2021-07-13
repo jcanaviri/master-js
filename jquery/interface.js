@@ -23,6 +23,20 @@ $(document).ready(function () {
 
   // Efectos
   $('#mostrar').click(function () {
-    $('.caja-efectos').toggle('shake', "slow");
+    $('.caja-efectos').toggle('shake', 'slow');
   });
+
+  // Tooltip
+  $(document).tooltip();
+
+  // Dialog
+  $('#lanzar-popup').click(function () {
+    $('#popup').dialog();
+  });
+
+  // Datepicker
+  $('#calendario').datepicker();
+
+  // Tabs
+  $('#pestanas').tabs();
 });
