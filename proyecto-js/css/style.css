@@ -131,27 +131,38 @@ body {
   text-align: justify;
 }
 
-form input[type="text"],
-form input[type="password"] {
+form input[type='text'],
+form input[type='password'] {
   display: block;
   padding: 5px;
   border-radius: 2px;
   border: none;
   outline: none;
   border: 1px solid #ccc;
-  width: 80%;
+  width: 100%;
   margin: 10px 0;
 }
 
-form input[type="text"]:focus,
-form input[type="password"]:focus {
+form input[type='text']:focus,
+form input[type='password']:focus {
   border-color: #555;
 }
 
-form input[type="submit"] {
+form input[type='submit'] {
   background: #eee;
+  margin-top: 20px;
   padding: 10px;
   border: 1px solid #ccc;
+  border-radius: 50px;
   color: #333;
   cursor: pointer;
+  width: 100%;
+  transition: background 0.5s ease;
+}
+form input[type='submit']:hover {
+  background: #235e3d;
+  color: #fff;
+}
+form input[type='submit']:active {
+  transform: translateY(4px);
 }
