@@ -166,3 +166,16 @@ form input[type='submit']:hover {
 form input[type='submit']:active {
   transform: translateY(4px);
 }
+
+footer {
+  font-family: Helvetica,sans-serif;
+  color: #fff;
+  height: 47px;
+  background: rgba(51, 51, 51, 0.70);
+  margin: 0 auto;
+  width: 65%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 50px;
+  line-height: 47px;
+}
