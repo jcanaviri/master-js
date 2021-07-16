@@ -87,8 +87,30 @@ $(document).ready(function () {
   // Scroll arriba de la web
   $('.subir').click(function (event) {
     event.preventDefault();
-    $('html, body').animate({
-      scrollTop: 0,
-    }, 500);
+    $('html, body').animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
   });
+
+  // Formulario de logueo
+  $('#form-login').submit(function () {
+    let username = $('#user').val();
+    localStorage.setItem('username', username);
+  });
+
+  let username = localStorage.getItem('username');
+  if (username) {
+    let about = $('#about p');
+    about.html(`Welcome ${username}`);
+    about.append('<a href="#" id="logout">Cerrar Cession</a>');
+    $('#login').hide();
+
+    $('#logout').click(function () {
+      localStorage.clear();
+      location.reload();
+    });
+  }
 });
