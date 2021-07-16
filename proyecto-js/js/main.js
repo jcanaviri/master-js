@@ -72,11 +72,14 @@ $(document).ready(function () {
   let theme = $('#theme');
   $('#green-theme').click(function () {
     theme.attr('href', 'css/green.css');
+    $('.bxslider div img').attr('src', './img/hojas.jpg');
   });
   $('#red-theme').click(function () {
     theme.attr('href', 'css/red.css');
+    $('.bxslider div img').attr('src', './img/rojo.jpg');
   });
   $('#blue-theme').click(function () {
     theme.attr('href', 'css/blue.css');
+    $('.bxslider div img').attr('src', './img/cielo.jpg');
   });
 });
