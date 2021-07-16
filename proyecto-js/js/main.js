@@ -1,6 +1,8 @@
 $(document).ready(function () {
   // Slider
   $('.bxslider').bxSlider({
+    auto: true,
+    speed: 100,
     mode: 'fade',
     captions: true,
     slideWidth: 1200,
@@ -64,5 +66,17 @@ $(document).ready(function () {
     </article>
     `;
     $('#posts').append(template);
+  });
+
+  // Select theme
+  let theme = $('#theme');
+  $('#green-theme').click(function () {
+    theme.attr('href', 'css/green.css');
+  });
+  $('#red-theme').click(function () {
+    theme.attr('href', 'css/red.css');
+  });
+  $('#blue-theme').click(function () {
+    theme.attr('href', 'css/blue.css');
   });
 });

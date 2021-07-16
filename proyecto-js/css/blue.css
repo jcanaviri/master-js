@@ -1,0 +1,19 @@
+body {
+  background: url('../img/cielo.jpg');
+}
+#logo {
+  background: #1f87c4;
+}
+#menu ul li:hover {
+  background: #1f87c4;
+}
+.btn-more {
+  background: #1f87c4;
+}
+.btn-more:hover {
+  background: #1c9be4;
+}
+form input[type='submit']:hover {
+  background: #1f87c4;
+  color: #fff;
+}
