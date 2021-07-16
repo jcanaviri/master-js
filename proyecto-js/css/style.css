@@ -202,3 +202,10 @@ footer {
 #blue-theme {
   background: #1c9be4;
 }
+
+.subir {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  float: right;
+}

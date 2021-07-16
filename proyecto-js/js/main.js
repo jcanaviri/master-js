@@ -2,7 +2,8 @@ $(document).ready(function () {
   // Slider
   $('.bxslider').bxSlider({
     auto: true,
-    speed: 100,
+    speed: 400,
+    pause: 1000,
     mode: 'fade',
     captions: true,
     slideWidth: 1200,
@@ -72,14 +73,22 @@ $(document).ready(function () {
   let theme = $('#theme');
   $('#green-theme').click(function () {
     theme.attr('href', 'css/green.css');
-    $('.bxslider div img').attr('src', './img/hojas.jpg');
+    $('#first').attr('src', './img/hojas.jpg');
   });
   $('#red-theme').click(function () {
     theme.attr('href', 'css/red.css');
-    $('.bxslider div img').attr('src', './img/rojo.jpg');
+    $('#first').attr('src', './img/rojo.jpg');
   });
   $('#blue-theme').click(function () {
     theme.attr('href', 'css/blue.css');
-    $('.bxslider div img').attr('src', './img/cielo.jpg');
+    $('#first').attr('src', './img/cielo.jpg');
+  });
+
+  // Scroll arriba de la web
+  $('.subir').click(function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0,
+    }, 500);
   });
 });
