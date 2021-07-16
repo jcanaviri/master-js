@@ -10,24 +10,59 @@ $(document).ready(function () {
   const posts = [
     {
       title: 'Prueba 1',
-      date: new Date(),
-      body: 'lorem ipsum dolor sit amet',
+      date:
+        'Published ' +
+        moment().date() +
+        ' of ' +
+        moment().format('MMMM') +
+        ' of ' +
+        moment().format('YYYY'),
+      body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum culpa modi asperiores, inventore dolorum eum molestiae fuga non earum ipsam, temporibus enim pariatur, ad ab veniam voluptate magni maiores quod!',
     },
     {
       title: 'Prueba 2',
-      date: new Date(),
-      body: 'lorem ipsum dolor sit amet',
+      date:
+        'Published ' +
+        moment().date() +
+        ' of ' +
+        moment().format('MMMM') +
+        ' of ' +
+        moment().format('YYYY'),
+      body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum culpa modi asperiores, inventore dolorum eum molestiae fuga non earum ipsam, temporibus enim pariatur, ad ab veniam voluptate magni maiores quod!',
     },
     {
       title: 'Prueba 3',
-      date: new Date(),
-      body: 'lorem ipsum dolor sit amet',
+      date:
+        'Published ' +
+        moment().date() +
+        ' of ' +
+        moment().format('MMMM') +
+        ' of ' +
+        moment().format('YYYY'),
+      body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum culpa modi asperiores, inventore dolorum eum molestiae fuga non earum ipsam, temporibus enim pariatur, ad ab veniam voluptate magni maiores quod!',
     },
     {
       title: 'Prueba 4',
-      date: new Date(),
-      body: 'lorem ipsum dolor sit amet',
+      date:
+        'Published ' +
+        moment().date() +
+        ' of ' +
+        moment().format('MMMM') +
+        ' of ' +
+        moment().format('YYYY'),
+      body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum culpa modi asperiores, inventore dolorum eum molestiae fuga non earum ipsam, temporibus enim pariatur, ad ab veniam voluptate magni maiores quod!',
     },
   ];
-  console.log(posts);
+
+  posts.forEach((post) => {
+    let template = `
+      <article class="post">
+      <h2>${post.title}</h2>
+      <span class="date">${post.date}</span>
+      <p>${post.body}</p>
+      <a href="#" class="btn-more">Leer Mas</a>
+    </article>
+    `;
+    $('#posts').append(template);
+  });
 });
