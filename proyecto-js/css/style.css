@@ -244,3 +244,10 @@ footer {
   display: block;
   margin-top: 5px;
 }
+.form-error {
+  font-size: 12px;
+  background-color: #ff004a;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+}
