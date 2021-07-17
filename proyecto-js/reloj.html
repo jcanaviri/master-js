@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link id="theme" rel="stylesheet" href="css/green.css">
 
-    <link rel="stylesheet" href="./js/jquery-ui-1.12.1/jquery-ui.structure.min.css">
-    <link rel="stylesheet" href="./js/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+    <!-- moment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"
+        integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -41,37 +43,11 @@
 
         <!-- Contenido -->
         <div id="content">
-            <h2>About me</h2>
+            <h2>Reloj</h2>
             <div id="box">
-                <div id="accordion">
-                    <h3>¿Quienes somos?</h3>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut optio aut sequi unde rerum
-                            deserunt omnis molestias dicta iusto praesentium consequatur quasi, saepe magni
-                            voluptatibus. Fugiat earum doloribus consequuntur aliquid?
-                        </p>
-                    </div>
-
-                    <h3>Nuestros servicios</h3>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut optio aut sequi unde rerum
-                            deserunt omnis molestias dicta iusto praesentium consequatur quasi, saepe magni
-                            voluptatibus. Fugiat earum doloribus consequuntur aliquid?
-                        </p>
-                    </div>
-
-                    <h3>Mas Información</h3>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut optio aut sequi unde rerum
-                            deserunt omnis molestias dicta iusto praesentium consequatur quasi, saepe magni
-                            voluptatibus. Fugiat earum doloribus consequuntur aliquid?
-                        </p>
-                    </div>
-                </div>
+                <div id="reloj"></div>
             </div>
+
             <aside id="sidebar">
                 <div id="about">
                     <h4><span>¿Who Am I?</span></h4>
@@ -106,7 +82,6 @@
 
     <!-- jquery -->
     <script src="./js/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
-
     <script src="./js/jquery-ui-1.12.1/jquery-ui.js"></script>
 
     <!-- Mis Scripts -->

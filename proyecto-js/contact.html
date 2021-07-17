@@ -31,9 +31,9 @@
             <nav id="menu">
                 <ul>
                     <li><a href="index.html">inicio</a></li>
-                    <li><a href="reloj.html">reloj</a></li>
+                    <li><a href="#">reloj</a></li>
                     <li><a href="about.html">sobre mi</a></li>
-                    <li><a href="contact.html">contacto</a></li>
+                    <li><a href="#">contacto</a></li>
                 </ul>
             </nav>
         </header>
@@ -41,37 +41,36 @@
 
         <!-- Contenido -->
         <div id="content">
-            <h2>About me</h2>
             <div id="box">
-                <div id="accordion">
-                    <h3>¿Quienes somos?</h3>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut optio aut sequi unde rerum
-                            deserunt omnis molestias dicta iusto praesentium consequatur quasi, saepe magni
-                            voluptatibus. Fugiat earum doloribus consequuntur aliquid?
-                        </p>
-                    </div>
+                <!-- Formulario de Contacto -->
+                <h2>Contacto</h2>
+                <form action="" method="POST" id="form-contact">
+                    <label for="name-field">First Name:</label>
+                    <input type="text" name="name-field" id="name-field" data-validation="alphanumeric">
 
-                    <h3>Nuestros servicios</h3>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut optio aut sequi unde rerum
-                            deserunt omnis molestias dicta iusto praesentium consequatur quasi, saepe magni
-                            voluptatibus. Fugiat earum doloribus consequuntur aliquid?
-                        </p>
-                    </div>
+                    <label for="surname-field">Last Name:</label>
+                    <input type="text" name="surname-field" id="surname-field" data-validation="alphanumeric">
 
-                    <h3>Mas Información</h3>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut optio aut sequi unde rerum
-                            deserunt omnis molestias dicta iusto praesentium consequatur quasi, saepe magni
-                            voluptatibus. Fugiat earum doloribus consequuntur aliquid?
-                        </p>
-                    </div>
-                </div>
+                    <label for="email-field">Email:</label>
+                    <input type="email" name="email-field" id="email-field" data-validation="email">
+
+                    <label for="sex-select">Sex:</label>
+                    <select name="sex-select" id="sex-select" data-validation="required">
+                        <option value="men">Men</option>
+                        <option value="woman">Woman</option>
+                    </select>
+
+                    <label for="date-field">Birthday:</label>
+                    <input type="text" name="date-field" id="date-field" data-validation="date"
+                        data-validation-format="dd/mm/yyyy">
+
+                    <label for="age-field">Age:</label>
+                    <input type="number" name="age-field" id="age-field" data-validation="number">
+
+                    <input type="submit" value="send">
+                </form>
             </div>
+
             <aside id="sidebar">
                 <div id="about">
                     <h4><span>¿Who Am I?</span></h4>
@@ -106,8 +105,10 @@
 
     <!-- jquery -->
     <script src="./js/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
-
     <script src="./js/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+    <!-- Plugin validacion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 
     <!-- Mis Scripts -->
     <script src="./js/main.js"></script>

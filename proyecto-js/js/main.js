@@ -117,7 +117,27 @@ $(document).ready(function () {
     });
   }
 
+  // Accordeon
   if (window.location.href.indexOf('about') > -1) {
-    $( "#accordion" ).accordion();
+    $('#accordion').accordion();
+  }
+
+  // Reloj
+  if (window.location.href.indexOf('reloj') > -1) {
+    setInterval(() => {
+      let clock = moment().format('h:mm:ss');
+      $('#reloj').html(clock);
+    }, 1000);
+  }
+
+  // Validacion
+  if (window.location.href.indexOf('contact') > -1) {
+    $('form input[name="date-field"]').datepicker({
+      format: 'dd/mm/yyyy',
+    });
+
+    $.validate({
+      lang: 'es',
+    });
   }
 });
