@@ -1,8 +1,16 @@
-<p>{{ title }} works XD</p>
+<div [ngStyle]="{
+    'background-color': config.bg,
+    'padding': '20px',
+    'border': '5px solid black',
+    'border-color': config.color
+}">
+    <h1>{{title}} works!</h1>
+    <p>{{description}}</p>
 
-<button (click)="hideGames(false);" *ngIf="showGames">Hide</button>
-<button (click)="hideGames(true);" *ngIf="!showGames">Show</button>
+    <button (click)="hideGames(false);" *ngIf="showGames">Hide</button>
+    <button (click)="hideGames(true);" *ngIf="!showGames">Show</button>
 
-<video-game *ngIf="showGames"></video-game>
-<shoes></shoes>
-<app-courses></app-courses>
+    <video-game *ngIf="showGames"></video-game>
+    <shoes></shoes>
+    <app-courses></app-courses>
+</div>
