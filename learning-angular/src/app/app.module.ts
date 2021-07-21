@@ -4,9 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VideoGameComponent } from './video-game/video-game.component';
+import { ShoesComponent } from './shoes/shoes.component';
 
 @NgModule({
-  declarations: [AppComponent, VideoGameComponent],
+  declarations: [AppComponent, VideoGameComponent, ShoesComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
