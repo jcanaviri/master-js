@@ -2,18 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'video-game',
-  template: `
-    <h3>video-game component</h3>
-    <ul>
-      <li>item-1</li>
-      <li>item-2</li>
-      <li>item-3</li>
-      <li>item-4</li>
-    </ul>
-  `,
+  templateUrl: './video-game.component.html',
 })
 export class VideoGameComponent {
+  public title: string;
+  public paragraph: string;
   constructor() {
-    console.log('Component vide-game works!')
+    this.title = 'Video Game Component'
+    this.paragraph = 'This is my favorite list'
   }
 }
