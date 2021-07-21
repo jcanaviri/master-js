@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'master-js';
+  public title = 'master-js';
+  public showGames: boolean = true;
+
+  hideGames(value: boolean): void {
+    this.showGames = value;
+  }
 }

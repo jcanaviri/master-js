@@ -1,5 +1,8 @@
 <p>{{ title }} works XD</p>
 
-<video-game></video-game>
+<button (click)="hideGames(false);" *ngIf="showGames">Hide</button>
+<button (click)="hideGames(true);" *ngIf="!showGames">Show</button>
+
+<video-game *ngIf="showGames"></video-game>
 <shoes></shoes>
 <app-courses></app-courses>
