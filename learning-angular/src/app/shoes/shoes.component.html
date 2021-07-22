@@ -1,10 +1,40 @@
 <h3>{{title}}</h3>
 
+<p>Nombres de las marcas</p>
+<ul>
+    <li *ngFor="let name of names; let i = index">
+        {{i}}.- {{name}}
+    </li>
+</ul>
+
+<p>Las zapatillas</p>
 <ul>
     <li *ngFor="let shoe of shoes">
-        {{shoe.name}} -
-        {{shoe.price}} -
-        {{shoe.color}} -
-        {{shoe.stock}}
+        <span [ngStyle]="{
+            'text-decoration': !shoe.stock ? 'line-through' : 'none'
+        }">
+            {{shoe.name}} - {{shoe.price}} - <strong>{{shoe.color}}</strong>
+        </span>
+
+        <div *ngIf  ="shoe.stock">
+            <span 
+                *ngIf="shoe.price < 500" 
+                [style.background]="shoe.price < 500 ? 'green' : 'transparent'"
+                [style.color]="shoe.price < 500 ? '#fff': '#000'"
+                > ¡EN OFERTA!</span>
+        </div>
+    </li>
+</ul>
+
+<p>El color de la zapatilla es?</p>
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'red'">
+        <span [style.background]="color">{{color}}</span>
+    </li>
+    <li *ngSwitchCase="'green'">
+        <span [style.background]="color">{{color}}</span>
+    </li>
+    <li *ngSwitchCase="'blue'">
+        <span [style.background]="color">{{color}}</span>
     </li>
 </ul>
