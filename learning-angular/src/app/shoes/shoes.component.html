@@ -1,7 +1,10 @@
 <h3>{{title}}</h3>
 
 <ul>
-    <li>reebok</li>
-    <li>fila retro</li>
-    <li>adidas</li>
+    <li *ngFor="let shoe of shoes">
+        {{shoe.name}} -
+        {{shoe.price}} -
+        {{shoe.color}} -
+        {{shoe.stock}}
+    </li>
 </ul>
