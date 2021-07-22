@@ -11,8 +11,10 @@ export class ShoesComponent implements OnInit {
   public shoes: Array<Shoe> = [];
   public names: string[] = [];
   public color: string;
+  public miMarca: string;
 
   constructor() {
+    this.miMarca = '';
     this.color = 'blue';
     this.shoes = [
       new Shoe('Nike Airmax', 400, 'Violeta', true),
@@ -32,5 +34,13 @@ export class ShoesComponent implements OnInit {
         this.names.push(shoe.name);
       }
     });
+  }
+
+  getMarca() {
+    alert(this.miMarca);
+  }
+
+  addMarca() {
+    this.names.push(this.miMarca);
   }
 }
