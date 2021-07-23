@@ -20,12 +20,20 @@
         <span [ngStyle]="{
             'text-decoration': !shoe.stock ? 'line-through' : 'none'
         }">
-            {{shoe.name}} - {{shoe.price}} - <strong>{{shoe.color}}</strong>
+            {{shoe.name}} - {{shoe.price}} - 
+            <strong 
+                [class.higthPrice]="shoe.price >= 500"
+                [ngClass]="{
+                  'redBg': shoe.price >= 500,
+                  'sub': shoe.name == 'Nike Runner'
+                }">{{shoe.price}}$</strong>
         </span>
 
         <div *ngIf="shoe.stock">
-            <span *ngIf="shoe.price < 500" [style.background]="shoe.price < 500 ? 'green' : 'transparent'"
-                [style.color]="shoe.price < 500 ? '#fff': '#000'"> ¡EN OFERTA!</span>
+            <span *ngIf="shoe.price < 500" 
+                [style.background]="shoe.price < 500 ? 'green' : 'transparent'"
+                [style.color]="shoe.price < 500 ? '#fff': '#000'"
+                > ¡EN OFERTA!</span>
         </div>
     </li>
 </ul>

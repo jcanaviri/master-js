@@ -1,0 +1,11 @@
+.higthPrice {
+  color: gray;
+  font-size: 38px;
+}
+
+.redBg {
+  background-color: red;
+}
+.sub {
+  text-decoration: underline;
+}
