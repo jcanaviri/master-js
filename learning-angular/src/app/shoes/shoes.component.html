@@ -1,7 +1,7 @@
 <h3>{{title}}</h3>
 
 <p>Agregar marca</p>
-<input type="text" [(ngModel)]="miMarca"> <br>
+<input type="text" [(ngModel)]="miMarca" (keyup.enter)="getWord();"> <br>
 <button (click)='getMarca();'>send</button>
 <button (click)='addMarca();'>add</button>
 {{miMarca}}
@@ -10,6 +10,7 @@
 <ul>
     <li *ngFor="let name of names; let i = index">
         {{i}}.- {{name}}
+        <button (click)='deleteMarca(i)'>DELETE</button>
     </li>
 </ul>
 

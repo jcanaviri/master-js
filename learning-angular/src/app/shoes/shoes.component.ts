@@ -43,4 +43,16 @@ export class ShoesComponent implements OnInit {
   addMarca() {
     this.names.push(this.miMarca);
   }
+
+  deleteMarca(i: number) {
+    this.names.splice(i, 1);
+  }
+
+  onBlur() {
+    console.log('Has salido del input');
+  }
+
+  getWord() {
+    alert(this.miMarca);
+  }
 }
