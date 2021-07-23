@@ -9,9 +9,20 @@ import { ShoesComponent } from './shoes/shoes.component';
 import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
-  declarations: [AppComponent, VideoGameComponent, ShoesComponent, CoursesComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  declarations: [
+    AppComponent, 
+    VideoGameComponent, 
+    ShoesComponent, 
+    CoursesComponent
+  ],
+  imports: [
+    BrowserModule, 
+    AppRoutingModule, 
+    FormsModule
+  ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent
+  ],
 })
 export class AppModule {}

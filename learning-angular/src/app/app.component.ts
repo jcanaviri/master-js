@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { Config } from './models/config';
 
 @Component({

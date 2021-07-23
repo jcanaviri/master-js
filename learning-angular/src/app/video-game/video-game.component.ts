@@ -7,6 +7,7 @@ import { Component, OnInit, DoCheck, OnDestroy } from '@angular/core';
 export class VideoGameComponent implements OnInit, DoCheck, OnDestroy {
   public title: string;
   public paragraph: string;
+  
   constructor() {
     this.title = 'Video Game Component';
     this.paragraph = 'This is my favorite list';
