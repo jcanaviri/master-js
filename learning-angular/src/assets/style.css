@@ -9,3 +9,7 @@
 .sub {
   text-decoration: underline;
 }
+
+.active {
+  border: 3px solid yellow;
+}

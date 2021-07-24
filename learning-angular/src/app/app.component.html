@@ -7,10 +7,18 @@
     <h1>{{title}} works!</h1>
     <p>{{description}}</p>
 
+    <nav>
+        <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a> &nbsp;
+        <a [routerLink]="['/shoes']" [routerLinkActive]="['active']">Shoes</a> &nbsp;
+        <a [routerLink]="['/courses']" [routerLinkActive]="['active']">Courses</a> &nbsp;
+        <a [routerLink]="['/video-game']" [routerLinkActive]="['active']">Video Games</a>
+    </nav>
+
     <!-- <button (click)="hideGames(false);" *ngIf="showGames">Hide</button>
     <button (click)="hideGames(true);" *ngIf="!showGames">Show</button>
 
     <video-game *ngIf="showGames"></video-game> -->
-    <shoes></shoes>
-    <app-courses></app-courses>
+    <!-- <shoes></shoes>
+    <app-courses></app-courses> -->
+    <router-outlet></router-outlet>
 </div>
