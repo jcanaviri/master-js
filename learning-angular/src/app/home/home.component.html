@@ -1,11 +1,13 @@
 <h1>Main Page</h1>
 
-<div *ngIf="auth; else noAuth">
+<div *ngIf="auth; then yesAuth else noAuth"></div>
+
+<ng-template #yesAuth>
     <h3>You are authorazed</h3>
     <button (click)="setAuth(false);">inavilate</button>
-</div>
+</ng-template>
 
 <ng-template #noAuth>
-   <p>Access Denied</p>
-   <button (click)="setAuth(true);">authorize</button>
+    <p>Access Denied</p>
+    <button (click)="setAuth(true);">authorize</button>
 </ng-template>
