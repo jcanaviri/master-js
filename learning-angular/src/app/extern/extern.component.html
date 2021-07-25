@@ -1,0 +1,4 @@
+<input type="text" [(ngModel)]="userId" (keyup.enter)="loadUser();">
+<div *ngIf="user">
+    <h2>{{user.name + ' ' + user.email + ' ' + user.phone}}</h2>
+</div>

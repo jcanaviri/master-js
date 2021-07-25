@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { routing, appRoutingProviders } from './app.routing';
 
@@ -10,6 +11,7 @@ import { VideoGameComponent } from './video-game/video-game.component';
 import { ShoesComponent } from './shoes/shoes.component';
 import { CoursesComponent } from './courses/courses.component';
 import { HomeComponent } from './home/home.component';
+import { ExternComponent } from './extern/extern.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,14 @@ import { HomeComponent } from './home/home.component';
     VideoGameComponent, 
     ShoesComponent, 
     CoursesComponent, 
-    HomeComponent
+    HomeComponent, ExternComponent
   ],
   imports: [
     BrowserModule, 
     AppRoutingModule, 
     FormsModule,
-    routing
+    routing,
+    HttpClientModule,
   ],
   providers: [
     appRoutingProviders,
