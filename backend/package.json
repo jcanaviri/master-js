@@ -1,0 +1,17 @@
+{
+  "name": "api-rest-nodejs",
+  "version": "1.0.0",
+  "description": "API rest del master de js",
+  "main": "index.js",
+  "author": "Josue Canaviri",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.3",
+    "nodemon": "^2.0.12"
+  }
+}
