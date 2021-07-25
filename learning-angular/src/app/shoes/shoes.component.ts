@@ -1,31 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Shoe } from '../models/shoe';
+import { ShoeService } from '../services/shoes.service';
 
 @Component({
   selector: 'shoes',
   templateUrl: './shoes.component.html',
   styleUrls: ['./shoes.component.css'],
+  providers: [ShoeService],
 })
 export class ShoesComponent implements OnInit {
   public title: string = 'Shoes Component';
-  public shoes: Array<Shoe> = [];
   public names: string[] = [];
   public color: string;
   public miMarca: string;
+  public shoes: Array<Shoe>;
 
-  constructor() {
+  constructor(
+    private _shoesService: ShoeService,
+  ) {
     this.miMarca = '';
     this.color = 'blue';
-    this.shoes = [
-      new Shoe('Nike Airmax', 400, 'Violeta', true),
-      new Shoe('Reebook Classic', 500, 'Blancas', false),
-      new Shoe('Nike Runner', 300, 'Negras', true),
-      new Shoe('Adidas Yezzy', 900, 'Purpura', true),
-    ];
+    this.shoes = this._shoesService.getShoes();
   }
 
   ngOnInit() {
     this.getNames();
+    console.log(this._shoesService.getText());
   }
 
   getNames() {
