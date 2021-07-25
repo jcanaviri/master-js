@@ -8,15 +8,22 @@ import { RequestService } from '../services/requests.service';
   providers: [RequestService],
 })
 export class ExternComponent implements OnInit {
-
   public user: any;
   public userId: number;
   public currentDate: any;
+  public saved: boolean;
 
-  constructor(
-    private _requestService: RequestService,
-  ) { 
+  public post: any;
+  public postResponse: any;
+
+  constructor(private _requestService: RequestService) {
     this.userId = 1;
+    this.post = {
+      title: '',
+      body: '',
+      userId: 1,
+    };
+    this.saved = false;
   }
 
   ngOnInit(): void {
@@ -27,12 +34,26 @@ export class ExternComponent implements OnInit {
   loadUser() {
     this.user = false;
     this._requestService.getUser(this.userId).subscribe(
-      result => {
+      (result) => {
         this.user = result;
       },
-      error => {
+      (error) => {
         console.log('Error');
       }
-    )
+    );
+  }
+
+  onSubmit(form: any) {
+    this._requestService.addPost(this.post).subscribe(
+      (response) => {
+        console.log(response);
+        this.saved = true;
+        this.postResponse = response;
+        form.reset();
+      },
+      (error) => {
+        console.log('Error', error);
+      }
+    );
   }
 }

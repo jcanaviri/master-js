@@ -8,6 +8,7 @@ import { ShoesComponent } from './shoes/shoes.component';
 import { VideoGameComponent } from './video-game/video-game.component';
 import { CoursesComponent } from './courses/courses.component';
 import { ExternComponent } from './extern/extern.component';
+import { ContactComponent } from './contact/contact.component';
 
 // Array of Routes
 const appRoutes: Routes = [
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   { path: 'courses', component: CoursesComponent },
   { path: 'courses/:username/:followers', component: CoursesComponent },
   { path: 'extern', component: ExternComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '**', component: HomeComponent },
 ];
 

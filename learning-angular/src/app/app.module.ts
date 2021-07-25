@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { ExternComponent } from './extern/extern.component';
 
 import { CalcPipe } from './pipes/calc.pipe';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CalcPipe } from './pipes/calc.pipe';
     CoursesComponent, 
     HomeComponent, ExternComponent,
     CalcPipe,
+    ContactComponent,
   ],
   imports: [
     BrowserModule, 
