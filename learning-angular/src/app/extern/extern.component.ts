@@ -11,6 +11,7 @@ export class ExternComponent implements OnInit {
 
   public user: any;
   public userId: number;
+  public currentDate: any;
 
   constructor(
     private _requestService: RequestService,
@@ -19,6 +20,7 @@ export class ExternComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.currentDate = new Date(1997, 11, 2);
     this.loadUser();
   }
 

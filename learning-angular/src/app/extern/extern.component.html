@@ -1,3 +1,11 @@
+<hr>
+{{currentDate | date: 'dd-MM-yy'}} <br>
+{{currentDate | date: 'fullDate' | uppercase}} <br>
+{{'Hello World' | lowercase}} <br>
+
+{{4 | calc: 2}}
+<hr>
+
 <input type="text" [(ngModel)]="userId" (keyup.enter)="loadUser();">
 
 <div *ngIf="!user">

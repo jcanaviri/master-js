@@ -13,13 +13,16 @@ import { CoursesComponent } from './courses/courses.component';
 import { HomeComponent } from './home/home.component';
 import { ExternComponent } from './extern/extern.component';
 
+import { CalcPipe } from './pipes/calc.pipe';
+
 @NgModule({
   declarations: [
     AppComponent, 
     VideoGameComponent, 
     ShoesComponent, 
     CoursesComponent, 
-    HomeComponent, ExternComponent
+    HomeComponent, ExternComponent,
+    CalcPipe,
   ],
   imports: [
     BrowserModule, 
