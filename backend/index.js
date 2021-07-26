@@ -1,9 +1,8 @@
 'use strict';
 
-const express = require('express');
-const app = express();
-
 const mongoose = require('mongoose');
+const app = require('./app');
+const port = process.env.PORT || 3000;
 
 mongoose.Promise = global.Promise;
 mongoose
@@ -13,15 +12,10 @@ mongoose
   })
   .then(() => {
     console.log('Conected XD');
+    app.listen(port, () => {
+      console.log('Listening on port 3000...');
+    });
   })
   .catch((err) => {
     console.log(err);
   });
-
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
-
-app.listen(3000, () => {
-  console.log('Listening on port 3000...');
-});
