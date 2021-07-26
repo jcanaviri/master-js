@@ -88,6 +88,27 @@ const controller = {
       return res.status(200).send({ projects });
     });
   },
+
+  updateProject: function (req, res) {
+    let projectId = req.params.id;
+    let update = req.body;
+
+    Project.findByIdAndUpdate(projectId, update, (err, p) => {
+      if (err)
+        return res.status(500).send({
+          message: 'Some error happend',
+        });
+
+      if (!p)
+        return res.status(404).send({
+          message: 'Product was not updated',
+        });
+
+      return res.status(200).send({
+        message: 'Updated',
+      });
+    });
+  },
 };
 
 module.exports = controller;
