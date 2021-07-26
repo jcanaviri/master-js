@@ -109,6 +109,25 @@ const controller = {
       });
     });
   },
+
+  deleteProject: function (req, res) {
+    let projectId = req.params.id;
+
+    Project.findByIdAndDelete(projectId, (err, p) => {
+      if (err)
+        return res.status(500).send({
+          message: 'Some error happend',
+        });
+
+      if (!p)
+        return res.status(404).send({
+          message: 'Product was not deleted',
+        });
+      return res.status(200).send({
+        message: 'Project was deleted',
+      });
+    });
+  },
 };
 
 module.exports = controller;
