@@ -1,5 +1,6 @@
 'use strict';
 
+const fs = require('fs');
 const Project = require('../models/Project');
 
 const controller = {
@@ -93,7 +94,7 @@ const controller = {
     let projectId = req.params.id;
     let update = req.body;
 
-    Project.findByIdAndUpdate(projectId, update, (err, p) => {
+    Project.findByIdAndUpdate(projectId, update, { new: true }, (err, p) => {
       if (err)
         return res.status(500).send({
           message: 'Some error happend',
@@ -106,6 +107,7 @@ const controller = {
 
       return res.status(200).send({
         message: 'Updated',
+        p,
       });
     });
   },
@@ -127,6 +129,57 @@ const controller = {
         message: 'Project was deleted',
       });
     });
+  },
+
+  uploadImage: function (req, res) {
+    let projectId = req.params.id;
+    let fileName = 'Image not loaded...';
+
+    if (req.files) {
+      let filePath = req.files.image.path;
+      let fileSplit = filePath.split('\\');
+      let fileName = fileSplit[1];
+
+      let extSplit = fileName.split('.');
+      let fileExt = extSplit[1];
+
+      if (
+        fileExt == 'png' ||
+        fileExt == 'jpg' ||
+        fileExt == 'jpeg' ||
+        fileExt == 'gif'
+      ) {
+        // With new: true we can get the last value of a project
+        Project.findByIdAndUpdate(
+          projectId,
+          { img: fileName },
+          { new: true },
+          (err, p) => {
+            if (err)
+              return res.status(500).send({
+                message: 'Some error happend',
+              });
+
+            if (!p)
+              return res.status(404).send({
+                message: 'Product was not updated',
+              });
+
+            return res.status(200).send({
+              p,
+            });
+          }
+        );
+      } else {
+        fs.unlink(filePath, (err) => {
+          return res.status(200).send({ message: 'No valid ext' });
+        });
+      }
+    } else {
+      return res.status(404).send({
+        message: fileName,
+      });
+    }
   },
 };
 
