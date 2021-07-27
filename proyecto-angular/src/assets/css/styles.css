@@ -30,9 +30,10 @@ header {
 
 header ul {
   display: block;
-  width: 35%;
+  width: 39%;
   height: inherit;
   margin: 0 auto;
+  margin-top: -5px;
 }
 header ul li {
   display: inline-block;
@@ -51,6 +52,17 @@ header ul li a {
 header a:hover {
   background: rgba(0, 0, 0, 0.8);
 }
-header #logo a:hover {
+
+/* For the logo */
+#logo {
+  font-family: 'Finger Paint', cursive;
+  font-size: 30px;
+}
+#logo a {
+  transition: color 500ms , transform 500ms;
+}
+#logo a:hover {
   background: transparent;
+  color: #000;
+  transform: scale(1.5);
 }
