@@ -13,6 +13,7 @@ export class CreateComponent implements OnInit {
 
   public title: string;
   public project: Project;
+  public status: string;
 
 
   constructor(
@@ -20,12 +21,25 @@ export class CreateComponent implements OnInit {
   ) {
     this.title = "Crear Projecto",
     this.project = new Project('', '', '', '', 2021, '', '');
+    this.status = '';
   }
 
   ngOnInit(): void {
   }
 
   onSubmit(form: any): void {
-    console.log(this.project)
+    this._projectService.saveProject(this.project).subscribe(
+      response => {
+        if (response) {
+          this.status = 'success';
+          form.reset();
+        } else {
+          this.status = 'failed';
+        }
+      },
+      error => {
+        console.log(error);
+      }
+    )
   }
 }

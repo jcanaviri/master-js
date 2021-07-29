@@ -183,3 +183,20 @@ form input[type="submit"]:hover {
 form input[disabled] {
   opacity: 0.4;
 }
+
+.message {
+  width: 40%;
+  padding: 5px;
+  border: 1px solid #eee;
+}
+.success {
+  background: green;
+  color: #fff;
+}
+.success a {
+  color: #fff;
+}
+.failed {
+  background: red;
+  color: #fff;
+}
