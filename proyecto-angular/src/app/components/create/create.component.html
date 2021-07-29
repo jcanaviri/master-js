@@ -3,28 +3,28 @@
     <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
         <p>
             <label for="namefield">Nombre: </label>
-            <input type="text" name="namefield" #namefield="ngModel" [(ngModel)]="project.name">
+            <input type="text" name="namefield" #namefield="ngModel" [(ngModel)]="project.name" required>
         </p>
         <p>
             <label for="descriptionfield">Descripción: </label>
-            <textarea type="text" name="descriptionfield" #descriptionfield="ngModel" [(ngModel)]="project.description"></textarea>
+            <textarea type="text" name="descriptionfield" #descriptionfield="ngModel" [(ngModel)]="project.description" required></textarea>
         </p>
         <p>
             <label for="categoryfield">Categoria: </label>
-            <input type="text" name="categoryfield" #categoryfield="ngModel" [(ngModel)]="project.category">
+            <input type="text" name="categoryfield" #categoryfield="ngModel" [(ngModel)]="project.category" required>
         </p>
         <p>
             <label for="yearfield">Years: </label>
-            <input type="number" name="yearfield" #yearfield="ngModel" [(ngModel)]="project.year">
+            <input type="number" name="yearfield" #yearfield="ngModel" [(ngModel)]="project.year" required>
         </p>
         <p>
             <label for="languagefield">Languaje: </label>
-            <input type="text" name="languagefield" #languagefield="ngModel" [(ngModel)]="project.languages">
+            <input type="text" name="languagefield" #languagefield="ngModel" [(ngModel)]="project.languages" required>
         </p>
 
         <p>
             <label for="imagefield">Imagen: </label>
-            <input type="file" name="imagefield" placeholder="Subir imagen">
+            <input type="file" name="imagefield" placeholder="Subir imagen" required>
         </p>
 
         <input type="submit" value="Send">
