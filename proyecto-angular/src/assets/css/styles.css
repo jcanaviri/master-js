@@ -257,3 +257,11 @@ form input[disabled] {
 .btn-del {
   background-color: red;
 }
+.btn-edit:hover,
+.btn-del:hover {
+  opacity: .7;
+}
+.btn-edit:active,
+.btn-del:active {
+  transform: translateY(4px);
+}
