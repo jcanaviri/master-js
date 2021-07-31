@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const Project = require('../models/Project');
+const path = require('path');
 
 const controller = {
   home: function (req, res) {
@@ -180,6 +181,21 @@ const controller = {
         message: fileName,
       });
     }
+  },
+
+  getImageFile: function (req, res) {
+    let file = req.params.image;
+    let pathFile = './uploads/' + file;
+    
+    fs.exists(pathFile, (exists) => {
+      if (exists) {
+        return res.sendFile(path.resolve(pathFile));
+      } else {
+        return res.send({
+          message: 'No existe la imagen',
+        });
+      }
+    });
   },
 };
 
