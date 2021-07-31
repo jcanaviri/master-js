@@ -28,4 +28,9 @@ export class ProjectService {
     let headers = new HttpHeaders().set('Contente-Type', 'application/json');
     return this._httpClient.get(`${this.url}projects`, { headers });
   }
+  
+  getProject(id: any): Observable<any> {
+    let headers = new HttpHeaders().set('Contente-Type', 'application/json');
+    return this._httpClient.get(`${this.url}project/${id}`, { headers })
+  }
 }

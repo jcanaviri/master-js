@@ -15,6 +15,7 @@ import { environment } from 'src/environments/environment';
 export class CreateComponent implements OnInit {
   public title: string;
   public project: Project;
+  public saveProject: any;
   public status: string;
   public filesToUpload: Array<File> = new Array<File>();
 
@@ -43,7 +44,7 @@ export class CreateComponent implements OnInit {
             )
             .then((result: any) => {
               this.status = 'success';
-              console.log(result);
+              this.saveProject = result.p;
               form.reset();
             }).catch((error) => {
               console.log(`SOME ERROR 👿: ${error}`)
