@@ -132,6 +132,20 @@ article.about {
   padding: 50px;
   padding-top: 10px;
 }
+.container .image {
+  float: left;
+  width: 49%;
+  height: 200px;
+  overflow: hidden;
+}
+.container .data {
+  float: left;
+  width: 49%;
+  margin-left: 20px;
+}
+.container .image img {
+  width: 100%;
+}
 .container h2 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
@@ -156,7 +170,9 @@ textarea {
 }
 
 form button,
-form input[type="submit"] {
+form input[type="submit"],
+.btn-edit,
+.btn-del {
   display: block;
   font-size: 17px;
   padding: 10px;
@@ -224,4 +240,20 @@ form input[disabled] {
 .project a {
   text-decoration: none;
   color: #000;
+}
+
+/* Buttons */
+.btn-edit,
+.btn-del {
+  width: 20%;
+  float: left;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 0;
+}
+.btn-edit {
+  background-color: orange;
+}
+.btn-del {
+  background-color: red;
 }
