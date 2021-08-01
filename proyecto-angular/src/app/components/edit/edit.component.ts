@@ -55,7 +55,25 @@ export class EditComponent implements OnInit {
   onSubmit(form: any) {
     this._projectService.updateProject(this.project).subscribe(
       response => {
-        console.log(response);
+        // Basically if the object filesToUpload
+        // was changed or already has a value
+        if (this.filesToUpload.length >= 1) {
+          // Send the image
+          this._uploadService
+            .makeFileRequest(
+              `${environment.url}upload-img/${response.p._id}`,
+              [],
+              this.filesToUpload,
+              'image'
+            )
+            .then((result: any) => {
+              this.status = 'success';
+              this.saveProject = result.p;
+              form.reset();
+            }).catch((error) => {
+              console.log(`SOME ERROR 👿: ${error}`)
+            });
+        }
       },
       error => {
         console.log('Some error happend 😕');
