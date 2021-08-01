@@ -18,14 +18,16 @@ export class CreateComponent implements OnInit {
   public saveProject: any;
   public status: string;
   public filesToUpload: Array<File> = new Array<File>();
+  public url: string;
 
   constructor(
     private _projectService: ProjectService,
     private _uploadService: UploadService
   ) {
-    (this.title = 'Crear Projecto'),
-      (this.project = new Project('', '', '', '', 2021, '', ''));
+    this.title = 'Crear Projecto';
+    this.project = new Project('', '', '', '', 2021, '', '');
     this.status = '';
+    this.url = environment.url;
   }
 
   ngOnInit(): void {}

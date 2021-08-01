@@ -1,6 +1,6 @@
-<div class="container">
-    <div class="image">
-        <img *ngIf="project.img" src="{{url+'get-image/'+project.img}}" alt="Project Image">
+<div class="container" *ngIf="project">
+    <div class="image" *ngIf="project.img">
+        <img src="{{url+'get-image/'+project.img}}" alt="Project Image">
     </div>
     <div class="data">
         <h1>{{project.name}}</h1>
@@ -9,7 +9,7 @@
         <p>{{project.languages}}</p>
 
         <p>
-            <a href="" class="btn-edit">Editar</a>
+            <a [routerLink]="['/editar-proyecto', project._id]" class="btn-edit">Editar</a>
             <a (click)="deleteProject(project._id)" class="btn-del">Eliminar</a>
         </p>
     </div>

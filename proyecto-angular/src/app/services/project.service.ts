@@ -1,16 +1,14 @@
-import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Project } from '../models/project';
-import { environment } from "src/environments/environment";
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class ProjectService {
   public url: string;
-  
-  constructor(
-    private _httpClient: HttpClient,
-  ) {
+
+  constructor(private _httpClient: HttpClient) {
     this.url = environment.url;
   }
 
@@ -21,21 +19,30 @@ export class ProjectService {
   saveProject(p: Project): Observable<any> {
     let params = JSON.stringify(p);
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
-    return this._httpClient.post(`${this.url}/save-project`, params, { headers })
+    return this._httpClient.post(`${this.url}/save-project`, params, {
+      headers,
+    });
   }
 
   getProjects(): Observable<any> {
     let headers = new HttpHeaders().set('Contente-Type', 'application/json');
     return this._httpClient.get(`${this.url}projects`, { headers });
   }
-  
+
   getProject(id: any): Observable<any> {
     let headers = new HttpHeaders().set('Contente-Type', 'application/json');
-    return this._httpClient.get(`${this.url}project/${id}`, { headers })
+    return this._httpClient.get(`${this.url}project/${id}`, { headers });
   }
 
   deleteProject(id: any): Observable<any> {
     let headers = new HttpHeaders().set('Contente-Type', 'application/json');
-    return this._httpClient.delete(`${this.url}project/${id}`, { headers })
+    return this._httpClient.delete(`${this.url}project/${id}`, { headers });
+  }
+
+  updateProject(p: Project): Observable<any> {
+    let headers = new HttpHeaders().set('Contente-Type', 'application/json');
+    return this._httpClient.put<any>(`${this.url}project/${p._id}`, p, {
+      headers,
+    });
   }
 }
