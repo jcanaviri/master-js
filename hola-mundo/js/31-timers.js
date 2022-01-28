@@ -1,39 +1,34 @@
 'use strict'
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
+  function intervalo() {
+    var tiempo = setInterval(function () {
+      console.log('Set interval ejecutado')
 
-	function intervalo(){
-		var tiempo = setInterval(function(){
-	
-			console.log("Set interval ejecutado");
-			
-			var encabezado = document.querySelector("h1");
-			if(encabezado.style.fontSize == "50px"){
-				encabezado.style.fontSize = "30px";
-			}else{
-				encabezado.style.fontSize = "50px";
-			}
+      var encabezado = document.querySelector('h1')
+      if (encabezado.style.fontSize == '50px') {
+        encabezado.style.fontSize = '30px'
+      } else {
+        encabezado.style.fontSize = '50px'
+      }
+    }, 1000)
 
+    return tiempo
+  }
 
-		}, 1000);
+  var tiempo = intervalo()
 
-		return tiempo;
-	}
+  var stop = document.querySelector('#stop')
 
-	var tiempo = intervalo();
+  stop.addEventListener('click', function () {
+    alert('Has parado el intervalo en bucle')
+    clearInterval(tiempo)
+  })
 
-	var stop = document.querySelector("#stop");
+  var start = document.querySelector('#start')
 
-	stop.addEventListener("click", function(){
-		alert("Has parado el intervalo en bucle");
-		clearInterval(tiempo);
-	});
-
-	var start = document.querySelector("#start");
-
-	start.addEventListener("click", function(){
-		alert("Has iniciado el intervalo en bucle");
-		intervalo();
-	});
-
-});
+  start.addEventListener('click', function () {
+    alert('Has iniciado el intervalo en bucle')
+    intervalo()
+  })
+})

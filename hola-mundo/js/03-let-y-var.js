@@ -1,7 +1,5 @@
 'use strict'
 
-// Pruebas con Let y var
-
 // Prueba con var
 var numero = 40
 console.log(numero) // valor 40

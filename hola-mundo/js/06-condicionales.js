@@ -6,16 +6,13 @@
 var edad = 19
 var nombre = 'David Suarez'
 
-/*
 // Operadores relacionales
-	Mayor: >
-	Menor: <
-	Mayor o igual: >=
-	Menor o igual: <=
-	Igual: ==
-	Distinto: !=
-*/
-
+// Mayor: >
+// Menor: <
+// Mayor o igual: >=
+// Menor o igual: <=
+// Igual: ===
+// Distinto: !==
 if (edad >= 18) {
   // Es mayor de edad
   console.log(nombre + ' tiene ' + edad + ' años, es mayor de edad')
@@ -32,21 +29,20 @@ if (edad >= 18) {
   console.log(nombre + ' tiene ' + edad + ' años, es MENOR de edad')
 }
 
-/*
 // Operadores lógicos
-AND(Y): && 
-OR(O): ||
-Negación: !
-*/
+// AND(Y): && 
+// OR(O): ||
+// Negación: !
 
 var year = 2018
 
 // Negación
-if (year != 2016) {
+if (year !== 2016) {
   console.log('El año no es 2016 realmente es: ' + year)
 }
 
 // AND
+// year between 2000 and 2020
 if (year >= 2000 && year <= 2020) {
   console.log('Estamos en la era actual')
 } else {
